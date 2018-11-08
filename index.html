@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SONG</title>
+	<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//dictionary of img number of each portfolio index
+			var index_dict = {
+				"1" : 4,
+				"2" : 3,
+				"3" : 8,
+				"4" : 4
+			};
+
+			$(".detail").click(function(){
+				var get_index = $(this).parents("div").attr("id");
+
+				var port_index = get_index[4];
+				var img_index = get_index[6];
+				var now_index = "img-" + port_index + "-" + img_index;
+
+				var direction_get = $(this).attr("class");
+				var direction = direction_get[7];
+				var index_number = index_dict[port_index];
+
+				if ( direction == "r"){
+					if (img_index == index_number) {
+						img_index = 1;
+					} else {
+						img_index *= 1;	//change string to interval
+						img_index += 1
+					}
+				} else if (direction == "l") {
+					if (img_index == 1) {
+						img_index = index_number;
+					} else {
+						img_index *= 1;	//change string to interval
+						img_index -= 1
+					}
+				}
+			$("#"+now_index).attr("id","img-"+port_index+"-"+img_index);
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<p style="text-align: center;">RESUME</p>
+	</header>
+
+	<div class="wrapper" id="profile">
+		<div id="profile-info">
+			<div id="name-ko" class="box">송진경</div>
+			<div id="name-eng" class="box">SONG JINKYEONG</div>
+			<div id="birth" class="box">1997 . 06 . 09</div>
+			<div id="phone" class="box">82+ 10 3215 4462</div>
+			<div id="gender" class="box">Female</div>
+			<div id="email" class="box">mit1259@naver.com</div>
+			<div id="address" class="box">Daeheungro, Mapogu, Seoul.</div>
+			<div id="work" class="box">GRAPHIC DESIGN, BOOK DESIGN, WEB DESIGN</div>
+		</div>
+		<div id="profile-img"></div>
+	</div>
+
+	<div class="empty-box"></div>
+
+	<div class="wrapper" id="education">
+		<div id="edu-title" class="box">EDUCATION</div>
+		<div id="univ" class="box">서강대학교<br>Sogang University</div>
+		<div id="univ-major" class="box">Art & Technology Major</div>
+		<div id="univ-duration" class="box">2016.03 ~ 2018.06 (break)</div>
+		<div id="high" class="box">한국디지털미디어고등학교<br>Digital Media High School</div>
+		<div id="high-major" class="box">Digital Contents Major.</div>
+		<div id="high-duration" class="box">2013.03 ~ 2016.02  Graduate</div>
+	</div>
+
+	<div class="wrapper" id="experience">
+		<div id="exp-title" class="box">EXPERIENCE</div>
+		<div id="coupang" class="box">쿠팡<br>COUPANG</div>
+		<div id="pang-duration" class="box">2018.09 ~ 2018.12</div>
+		<div id="pang-job" class="box">엑셀 및 사무보조 / Excel, Administrative Support</div>
+		<div id="aimerfeel" class="box">에메필<br>Aimerfeel</div>
+		<div id="aimerfeel-duration" class="box">2017.02 ~ 2017.09</div>
+		<div id="aimerfeel-job" class="box">고객응대 및 판매, Customer sales </div>
+	</div>
+
+
+	<div class="wrapper" id="qualification">
+		<div id="qual-title" class="box">QUALIFICATION</div>
+		<div id="word" class="box">워드프로세서 단일등급</div>
+		<div id="word-info" class="box">2012.12 / 대한상공회의소 </div>
+		<div id="excel" class="box">컴퓨터활용능력 2급</div>
+		<div id="excel-info" class="box">2012.02 / 대한상공회의소</div>
+		<div id="graphics" class="box">컴퓨터그래픽스운용기능사</div>
+		<div id="graphics-info" class="box">2013.02 / 한국인력뭐시기공단</div>
+		<div id="accounting" class="box">전산회계운용기능사 3급</div>
+		<div id="accounting-info" class="box">2015.05 / 한국인력</div>
+	</div>
+
+	<div class="empty-box"></div>
+
+	<div class="wrapper" id="skills">
+		<div id="skills-title" class="box">SKILLS</div>
+
+		<div id="graphic-tool" class="box">Graphic Tool</div>
+		<div id="photoshop"class="box">Adobe Photoshop</div>
+		<div id="photoshop-info" class="box">상 / Master</div>
+		<div id="illustrator"class="box">Adobe Illustrator</div>
+		<div id="illustrator-info"class="box">상 / Master</div>
+		<div id="indesign"class="box">Adobe Indesign</div>
+		<div id="indesign-info" class="box">상 / Master</div>
+		<div id="three-D" class="box">Autodesk Maya, 3D Max</div>
+		<div id="three-D-info" class="box">중 / Intermediate</div>
+		<div id="premiere" class="box">Adobe Premiere</div>
+		<div id="premiere-info" class="box">중 / Intermediate</div>
+
+		<div id="web-develop" class="box">Web<br>Develop</div>
+		<div id="htmlcss" class="box">HTML, CSS</div>
+		<div id="htmlcss-info" class="box">상 / Master</div>
+		<div id="js-query" class="box">Javascript, JQuery</div>
+		<div id="js-query-info" class="box">중 / intermediate</div>
+		<div id="python" class="box">Python, Processing</div>
+		<div id="python-info" class="box">하 / Beginner</div>
+
+		<div id="OA" class="box">OA<br>Programs</div>
+		<div id="oa-word" class="box">Microsoft Word</div>
+		<div id="oa-word-info" class="box">상 / Master</div>
+		<div id="oa-excel" class="box">Microsoft Excel</div>
+		<div id="oa-excel-info" class="box">상 / Master</div>
+		<div id="oa-ppt" class="box">Microsoft PowerPoint</div>
+		<div id="oa-ppt-info" class="box">상 / Master</div>
+	</div>
+
+	<div class="empty-box"></div>
+
+	<div class="wrapper" id="portfolio">
+		<div id="portfolio-title" class="box">PORTFOLIO</div>
+		<div class="portfolio-info" id="info-1">
+			<div class="info-title">베개 3호<br>Wege vol.3</div>
+			<div class="info-detail">Book Design<br>-<br>
+				2018.06 - 2018.07<br>148*210mm, 292p</br>Adobe Illustrator, Indesign</div>
+		</div>
+		<div class="portfolio-img" id="img-1-1">
+			<div class="detail left" id="left-1"><</div>
+			<div class="detail right" id="right-1">></div>
+		</div>
+
+		<div class="portfolio-info" id="info-2">
+			<div class="info-title">크리틱스레코드 2권<br>Critics Record vol.2</div>
+			<div class="info-detail">Book Design<br>-<br>
+				2017.01 - 2017.02<br>148*210mm, 182p</br>Adobe Illustrator, Indesign</div>
+		</div>
+		<div class="portfolio-img" id="img-2-1">
+			<div class="detail left" id="left-2"><</div>
+			<div class="detail right" id="right-2">></div>
+		</div>
+
+		<div class="portfolio-info" id="info-3">
+			<div class="info-title">픽셀 일러스트<br>Pixel Illustration</div>
+			<div class="info-detail">Illustration<br>-<br>
+				2018.03 - <br>Adobe Photoshop</div>
+		</div>
+		<div class="portfolio-img" id="img-3-1">
+			<div class="detail left" id="left-3"><</div>
+			<div class="detail right" id="right-3">></div>
+		</div>
+
+		<div class="portfolio-info" id="info-4">
+			<div class="info-title">베개 2호<br>Wege vol.2</div>
+			<div class="info-detail">Book Design<br>-<br>
+				2017.12 - 2018.02<br>148*210mm<br>286p<br>Adobe Illustrator, Indesign</div>
+		</div>
+		<div class="portfolio-img" id="img-4-1">
+			<div class="detail left" id="left-4"><</div>
+			<div class="detail right" id="right-4">></div>
+		</div>
+
+		<div id="view-more" class="box">View more portfolio in<br>>> <a href="http://at-fence.ml">at-fence.ml</a> <<</div>
+	</div>
+
+	<div class="empty-box"></div>
+
+	<div class="wrapper" id="self-intro">
+		<div id="intro-title" class="box">Dear Company.</div>
+		<div id="intro-ko" class="box"> 안녕하세요 한글자기소개서를 작성중입니다.</div>
+		<div id="intro-eng" class="box">Hi. I'm writing self-introduction by english</div>
+	</div>
+
+	<div id="outro">
+		확인 감사합니다. 좋은 결과 기다리겠습니다.<br>추가적으로 궁금하신 것이 있다면 언제든 연락주시길 바랍니다.<br>-<br>
+		Thank you for reading my resume.<br>Please feel free to ask me any other quetions.
+	</div>
+
+</body>
+</html>

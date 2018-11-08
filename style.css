@@ -1,0 +1,225 @@
+*{margin: 0; padding: 0;}
+a{color: inherit;}
+
+body{
+	background-color: white;
+	margin : 5vh auto 15vh auto;
+	color: black;
+	border: solid 5px black;
+	font-size: 1.25em;
+	font-weight: 700;
+	font-family: 'Helvetica',sans-serif;
+}
+@media screen and (min-width: 768px){
+	body{width: 768px;}
+}
+@media screen and (max-width: 768px){
+	body{width: 100%;}
+}
+
+header{
+	padding: 7.5vh 0;
+}
+
+.wrapper{
+	display: grid;
+	justify-content: center;
+	align-items: stretch;
+	text-align: center;
+}
+
+
+#profile{
+	grid-template-columns: 4fr 1fr;
+	grid-template-rows: auto;
+	border-top: solid 5px black;
+}
+#profile-info{
+	grid-area: 1 / 1 / 2 / 2;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+	"a a b b"
+	"c d d e"
+	"f f g g"
+	"h h h h";
+}
+#profile-img{
+	grid-area: 1 / 2 / 2 / 3;
+	background-image: url(profile-img.png);
+	background-size: cover;
+	background-position: center;
+	border-left: solid 5px black;
+}
+.box{
+	padding: 0.75em 0;
+}
+.empty-box{
+	height: 12.5vh;
+	background-color: black;
+}
+#name-ko{ grid-area: a;}
+#name-eng{ grid-area: b; border-left: solid 5px black;}
+#birth{ grid-area: c; border-top: solid 5px black; border-right: solid 5px black;}
+#phone{ grid-area: d; border-top: solid 5px black;border-right: solid 5px black;}
+#gender{ grid-area: e; border-top: solid 5px black; }
+#email{grid-area: f; border-top: solid 5px black; border-right: solid 5px black;}
+#address{grid-area: g; border-top: solid 5px black;}
+#work{grid-area: h; border-top: solid 5px black;}
+
+#education{
+	border-top: solid 5px black;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+	"a a a"
+	"b c c"
+	"b d d"
+	"e f f"
+	"e g g";
+}
+#edu-title{grid-area: a;}
+#univ{grid-area: b; border-top: solid 5px black; border-right: solid 5px black; padding: 1.5em 0;
+}
+#univ-major{grid-area: c; border-top: solid 5px black;}
+#univ-duration{grid-area: d; border-top : solid 5px black;}
+#high{grid-area: e; border-top: solid 5px black; border-right: solid 5px black; padding: 1.5em 0;}
+#high-major{grid-area: f; border-top: solid 5px black;}
+#high-duration{grid-area: g; border-top: solid 5px black;}
+
+#experience{
+	border-top: solid 5px black;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+	"a a a"
+	"b c c"
+	"b d d"
+	"e f f"
+	"e g g";
+}
+#exp-title{ grid-area: a;}
+
+#coupang{ grid-area: b;  border-top: solid 5px black; border-right: solid 5px black; padding: 1.5em 0;}
+#pang-duration{grid-area: c; border-top: solid 5px black; }
+#pang-job{grid-area: d;  border-top: solid 5px black;}
+
+#aimerfeel{ grid-area: e;  border-top: solid 5px black; border-right: solid 5px black; padding: 1.5em 0;}
+#aimerfeel-duration{grid-area: f; border-top: solid 5px black;}
+#aimerfeel-job{grid-area: g; border-top: solid 5px black;}
+
+
+#qualification{
+	border-top: solid 5px black;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+
+}
+#qual-title{ grid-area: 1 / 1 / 2 / 4 ;}
+#word{grid-area: 2/1/3/2; border-top: solid 5px black; border-right: solid 5px black;}
+#word-info{grid-area: 2 / 2 / 3 / 4; border-top: solid 5px black;}
+#excel{grid-area: 3 / 1 /4 / 2; border-top: solid 5px black; border-right: solid 5px black;}
+#excel-info{grid-area: 3 / 2 / 5 / 4; border-top: solid 5px black;}
+#graphics{ grid-area: 4 / 1 / 5 / 2; border-top: solid 5px black; border-right: solid 5px black;}
+#graphics-info{grid-area: 4 / 2 / 5 / 4; border-top: solid 5px black;}
+#accounting{grid-area: 5 / 1 / 6 / 2 ; border-top: solid 5px black; border-right: solid 5px black;}
+#accounting-info{grid-area: 5 / 2 / 6 / 4; border-top: solid 5px black;}
+
+#skills{
+	border-top: solid 5px black;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+}
+
+#skills-title{ grid-area: 1/1/2/5; }
+#graphic-tool{grid-area: 2/1/7/2; border-top: solid 5px black;border-right: solid 5px black; padding: 6.5em 0;}
+#photoshop{grid-area: 2/2/3/4; border-top: solid 5px black;border-right: solid 5px black;}
+#photoshop-info{grid-area: 2/4/3/5; border-top: solid 5px black;}
+#illustrator{grid-area: 3/2/4/4; border-top: solid 5px black;border-right: solid 5px black;}
+#illustrator-info{grid-area: 3/4/4/5; border-top: solid 5px black;}
+#indesign{grid-area: 4/2/5/4; border-top: solid 5px black;border-right: solid 5px black;}
+#indesign-info{grid-area: 4/4/5/5; border-top: solid 5px black;}
+#three-D{grid-area: 5/2/6/4; border-top: solid 5px black; border-right: solid 5px black;}
+#three-D-info{grid-area: 5/4/6/5; border-top: solid 5px black;}
+#premiere{grid-area: 6/2/7/4; border-top: solid 5px black;border-right: solid 5px black;}
+#premiere-info{grid-area: 6/4/7/5; border-top: solid 5px black;}
+
+#web-develop{grid-area: 7/1/10/2; border-top: solid 5px black;border-right: solid 5px black; padding: 3em 0;}
+#htmlcss{grid-area: 7/2/8/4;border-top: solid 5px black;border-right: solid 5px black;}
+#htmlcss-info{grid-area: 7/4/8/5; border-top: solid 5px black;}
+#js-query{grid-area: 8/2/9/4; border-top: solid 5px black; border-right: solid 5px black;}
+#js-query-info{grid-area: 8/4/9/5; border-top: solid 5px black;}
+#python{grid-area: 9/2/10/4; border-top: solid 5px black; border-right: solid 5px black;}
+#python-info{grid-area: 9/4/10/5; border-top: solid 5px black;}
+
+#OA{grid-area: 10/1/13/2; border-top: solid 5px black;border-right: solid 5px black; padding: 3em 0;}
+#oa-word{grid-area: 10/2/11/4; border-top: solid 5px black;border-right: solid 5px black;}
+#oa-word-info{grid-area: 10/4/11/5; border-top: solid 5px black;}
+#oa-excel{grid-area: 11/2/12/4; border-top: solid 5px black;border-right: solid 5px black;}
+#oa-excel-info{grid-area: 11/4/12/5; border-top: solid 5px black;}
+#oa-ppt{grid-area: 12/2/13/4; border-top: solid 5px black;border-right: solid 5px black;}
+#oa-ppt-info{grid-area: 12/4/13/5;border-top: solid 5px black;}
+
+#self-intro{
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+}
+#intro-title{grid-column-start: 1;grid-column-end: 3;}
+#intro-ko{border-top: solid 5px black; border-right: solid 5px black; padding: 1.25em;}
+#intro-eng{border-top: solid 5px black;padding: 1.25em;}
+
+#outro{padding: 3em; border-top: solid 5px black; text-align: center;}
+
+
+#portfolio{
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto repeat(3,2fr);/* portfolio number */
+}
+
+#portfolio-title{grid-area: 1/1/2/3;}
+.portfolio-info{
+	text-align: left; border-top: solid 5px black; border-right: solid 5px black;
+	display: grid; grid-template-rows: auto 2fr; grid-template-columns: auto;
+}
+.info-title{ padding: 1.25em;}
+.info-detail{padding: 1.25em; border-top: solid 5px black; font-size: 0.75em; line-height: 1.5em;}
+.portfolio-img{
+	border-top: solid 5px black;
+	height: 19.25em;
+	display: grid;
+
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: auto;
+
+	background-position: center;
+	background-size: contain;
+}
+.detail{padding: 9em 2em;}
+.left{grid-area: 1/1/2/2;  text-align: left;}
+.left:hover{background-image: linear-gradient(to right,rgba(0,0,0,0.1),rgba(0,0,0,0));}
+.right{grid-area: 1/3/2/4; text-align: right;}
+.right:hover{background-image: linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0));}
+#view-more{grid-column-start: 1;grid-column-end: 3; border-top: solid 5px black;}
+/* --------------------- */
+#img-1-1{ background-image: url(contents/wege3/1.png);}
+#img-1-2{ background-image: url(contents/wege3/2.png);}
+#img-1-3{ background-image: url(contents/wege3/3.png);}
+#img-1-4{ background-image: url(contents/wege3/4.png);}
+
+#img-2-1{ background-image: url(contents/critics2/1.jpg);}
+#img-2-2{ background-image: url(contents/critics2/2.jpg);}
+#img-2-3{ background-image: url(contents/critics2/3.jpg);}
+
+#img-3-1{ background-image: url(contents/pixel/1.png);}
+#img-3-2{ background-image: url(contents/pixel/2.png);}
+#img-3-3{ background-image: url(contents/pixel/3.png);}
+#img-3-4{ background-image: url(contents/pixel/4.png);}
+#img-3-5{ background-image: url(contents/pixel/5.png);}
+#img-3-6{ background-image: url(contents/pixel/6.png);}
+#img-3-7{ background-image: url(contents/pixel/7.png);}
+#img-3-8{ background-image: url(contents/pixel/8.png);}
+
+#img-4-1{ background-image: url(contents/wege2/1.png);}
+#img-4-2{ background-image: url(contents/wege2/2.png);}
+#img-4-3{ background-image: url(contents/wege2/3.png);}
+#img-4-4{ background-image: url(contents/wege2/4.png);}
